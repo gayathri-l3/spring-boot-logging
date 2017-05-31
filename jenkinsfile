@@ -1,7 +1,7 @@
 node('maven') {
 stage 'buildInDevelopment'
-openshiftBuild(buildConfig: 'springdev', showBuildLogs: 'true')
+openshiftBuild(buildConfig: 'springqa', showBuildLogs: 'true')
 stage 'deployInDevelopment'
-openshiftDeploy(deploymentConfig: 'springdev')
-openshiftScale(deploymentConfig: 'springdev',replicaCount: '1')
+openshiftDeploy(deploymentConfig: 'springqa')
+openshiftScale(deploymentConfig: 'springqa',replicaCount: '1')
 }
